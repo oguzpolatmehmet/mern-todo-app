@@ -1,0 +1,33 @@
+POST http://localhost:5500/api/item
+Content-Type: application/json
+
+{
+  "item": "Second TodoItem Created."
+}
+
+
+#########
+
+GET http://localhost:5500/api/items
+Content-Type: application/json
+
+
+####
+
+@item = 64db2f62c6c0ddb111ddb407
+PUT http://localhost:5500/api/item/{{item}}
+Content-Type: application/json
+
+{
+  "item": "Selected TodoItem Updated v1!"
+}
+
+####
+
+@item = 64db2f62c6c0ddb111ddb407
+DELETE http://localhost:5500/api/item/{{item}}
+Content-Type: application/json
+
+{
+  "item": "{{item}} DELETED!"
+}
